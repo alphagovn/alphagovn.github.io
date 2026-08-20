@@ -6,9 +6,10 @@
 <title>Danh thiếp - Alphago</title>
 <style>
   :root {
-    --primary: #F77F00;
-    --primary-dark: #B25400;
-    --tint: #FFF1E0;
+    --primary: #DE101A;
+    --primary-dark: #A10D14;
+    --primary-text: #ffffff;
+    --tint: #FDE7E8;
     --ink: #1c1c1e;
     --muted: #6b7280;
   }
@@ -24,7 +25,7 @@
   .page { width: 100%; max-width: 440px; padding-bottom: 44px; }
   .hero {
     background: #FFFFFF;
-    background-image: radial-gradient(circle at 85% 0%, rgba(247,127,0,0.18) 0%, transparent 55%);
+    background-image: radial-gradient(circle at 85% 0%, rgba(222,16,26,0.18) 0%, transparent 55%);
     padding: 32px 24px 76px;
     text-align: center;
     position: relative;
@@ -36,8 +37,8 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     color: var(--primary);
-    background: rgba(247,127,0,0.10);
-    border: 1px solid rgba(247,127,0,0.35);
+    background: rgba(222,16,26,0.10);
+    border: 1px solid rgba(222,16,26,0.35);
     border-radius: 100px;
     padding: 5px 12px;
   }
@@ -193,7 +194,7 @@
   .btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
   .btn-primary {
     background: var(--primary);
-    color: #121214;
+    color: var(--primary-text);
   }
   .btn-primary:active { background: var(--primary-dark); }
   .btn-outline {
@@ -282,12 +283,9 @@
           Lưu số điện thoại
         </button>
         
-        <a class="btn btn-wallet" href="https://pay.google.com/gp/v/save/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YWxsZXQtaXNzdWVyQGRhbmgtdGhpZXAtd2FsbGV0LmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiZ29vZ2xlIiwidHlwIjoic2F2ZXRvd2FsbGV0IiwiaWF0IjoxNzg3MTEzMzIzLCJvcmlnaW5zIjpbXSwicGF5bG9hZCI6eyJnZW5lcmljQ2xhc3NlcyI6W3siaWQiOiIzMzg4MDAwMDAwMDIzMTkwMjIxLmFscGhhZ29fY2FyZCIsImlzc3Vlck5hbWUiOiJBbHBoYWdvIiwiaGV4QmFja2dyb3VuZENvbG9yIjoiI0Y3N0YwMCIsImxvZ28iOnsic291cmNlVXJpIjp7InVyaSI6Imh0dHBzOi8vYWxwaGFnb3ZuLmdpdGh1Yi5pby9hc3NldHMvd2FsbGV0LWxvZ28tYWxwaGFnby12My5wbmcifX0sImhleEZvbnRDb2xvciI6IiNGRkZGRkYifV0sImdlbmVyaWNPYmplY3RzIjpbeyJpZCI6IjMzODgwMDAwMDAwMjMxOTAyMjEuYWxwaGFnb19idWl0dWFubWluaC12MyIsImNsYXNzSWQiOiIzMzg4MDAwMDAwMDIzMTkwMjIxLmFscGhhZ29fY2FyZCIsInN0YXRlIjoiQUNUSVZFIiwiY2FyZFRpdGxlIjp7ImRlZmF1bHRWYWx1ZSI6eyJsYW5ndWFnZSI6InZpIiwidmFsdWUiOiJEYW5oIHRoaVx1MWViZnAgXHUwMTExaVx1MWVjN24gdFx1MWVlZCJ9fSwiaGVhZGVyIjp7ImRlZmF1bHRWYWx1ZSI6eyJsYW5ndWFnZSI6InZpIiwidmFsdWUiOiJCXHUwMGY5aSBUdVx1MWVhNW4gTWluaCJ9fSwic3ViaGVhZGVyIjp7ImRlZmF1bHRWYWx1ZSI6eyJsYW5ndWFnZSI6InZpIiwidmFsdWUiOiJHaVx1MDBlMW0gXHUwMTEwXHUxZWQxYyBcdTAwYjcgQWxwaGFnbyJ9fSwiaGV4QmFja2dyb3VuZENvbG9yIjoiI0Y3N0YwMCIsImxvZ28iOnsic291cmNlVXJpIjp7InVyaSI6Imh0dHBzOi8vYWxwaGFnb3ZuLmdpdGh1Yi5pby9hc3NldHMvd2FsbGV0LWxvZ28tYWxwaGFnby12My5wbmcifX0sInRleHRNb2R1bGVzRGF0YSI6W3siaWQiOiJjb21wYW55IiwiaGVhZGVyIjoiQ1x1MDBkNE5HIFRZIiwiYm9keSI6IkNcdTAwZjRuZyB0eSBUTkhIIEFscGhhZ28ifSx7ImlkIjoicGhvbmUiLCJoZWFkZXIiOiJcdTAxMTBJXHUxZWM2TiBUSE9cdTFlYTBJIiwiYm9keSI6IjA5MzQ0OTk4NDYifV0sImxpbmtzTW9kdWxlRGF0YSI6eyJ1cmlzIjpbeyJ1cmkiOiJodHRwczovL2FscGhhZ292bi5naXRodWIuaW8vYWxwaGFnby10dWFubWluaC5odG1sIiwiZGVzY3JpcHRpb24iOiJYZW0gXHUwMTExXHUxZWE3eSBcdTAxMTFcdTFlZTcgdGhcdTAwZjRuZyB0aW4gJiBsXHUwMWIwdSBkYW5oIGJcdTFlYTEifSx7InVyaSI6InRlbDorODQ5MzQ0OTk4NDYiLCJkZXNjcmlwdGlvbiI6IkdcdTFlY2RpIDA5MzQ0OTk4NDYifV19LCJiYXJjb2RlIjp7InR5cGUiOiJRUl9DT0RFIiwidmFsdWUiOiJodHRwczovL2FscGhhZ292bi5naXRodWIuaW8vYWxwaGFnby10dWFubWluaC5odG1sIiwiYWx0ZXJuYXRlVGV4dCI6IiJ9fV19fQ.XeUmvNgH0ykmQrOcWMv8urrtQTGfPjA__PK8_AcOlsu050GiSLTF9VbrWRGkpW0tn5x3EgnQEyanJdK6RAEjLDR_dIY3uxI3GtnN5cQlrxZfwvmxegldRzfCQxohhHF4vz1lQhOe0EjaXRJcdCOzeAficQN5pOWWUjcpGDPzgusi449g0k0vxwGVZLVbd9r9J05LxgEy--LAL6w_ZNW7gZYHIxh5rgz9i-In_STsliFwDNvqB_9rui3rg0TYgOFepoTOyHPTUbjdbM8kHKHMw6bvjNqDyhdXenTuurEnHrOcm8zqKjrE_GNnLkyGYqNHHI6ZZYVx2QiPiFxYkwiYbw">
-          <svg viewBox="0 0 24 24"><path d="M21 7h-1V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM4 6h14v1H4V6zm16 12H4V9h16v9zm-3-4.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
-          Thêm vào Google Wallet
-        </a>
+        
       </div>
-      <p class="wallet-note">Đang ở chế độ thử nghiệm — hiện chỉ khả dụng cho một số người dùng được cấp quyền.</p>
+      
 
       <footer>Danh thiếp điện tử &middot; Alphago</footer>
     </div>
